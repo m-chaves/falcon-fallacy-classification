@@ -7,6 +7,9 @@ This dataset includes expert annotations for six fallacy types—loaded language
 The dataset's graph structure enables analysis of the relationships between fallacies and their progression in conversations.
 We also evaluate the performance of different large language models (LLMs) on this dataset and propose some transformer-based architectures.
 
+<!-- Pending to add links to the following -->
+<!-- Publish paper | Extended paper (with appendices and additional results) -->
+
 ### Installation
 
 1. To clone this repository:
@@ -42,8 +45,12 @@ We also evaluate the performance of different large language models (LLMs) on th
    * [train_val_test.ipynb](https://github.com/m-chaves/falcon-fallacy-classification/blob/master/train_val_test.ipynb) merges the annotations information with the tweets data, add extra engineered features and split the data into train, validation and test sets.
    * [corpus_statistics_and_analysis.ipynb](https://github.com/m-chaves/falcon-fallacy-classification/blob/master/corpus_statistics_and_analysis.ipynb) gathers different statistical analysis of the dataset. In particular, it studies the transitivity of the fallacies in the dataset.
 
+2. **Annotation Guidelines**
 
-2. **Encoder-based Models**
+   The annotation guidelines can be found in the [annotation_guidelines.pdf](https://github.com/m-chaves/falcon-fallacy-classification/blob/master/annotation_guidelines/annotation_guidelines.pdf) file.
+
+
+3. **Encoder-based Models**
 
    We fine-tuned several transformer models from Hugging Face’s Transformers library using the FALCON dataset. The task is a multi-label classification problem, where each tweet can be associated with multiple fallacies. The code for training and evaluating these models can be found in the following files:
 
@@ -52,14 +59,14 @@ We also evaluate the performance of different large language models (LLMs) on th
    * [predict_context_model.py](https://github.com/m-chaves/falcon-fallacy-classification/blob/master/predict_context_model.py) and [predict_context_model.sh](https://github.com/m-chaves/falcon-fallacy-classification/blob/master/scheduler_scripts/predict_context_model.sh) allow to predict the labels of the test set using the fine-tuned context model.
    * [results_from_models.ipynb](https://github.com/m-chaves/falcon-fallacy-classification/blob/master/results_from_models.ipynb) gathers the results from the models and performs a comparison between them. It also studies the error analysis of the best model and conducts statistical tests to understand the effect of different features in model performance.
 
-3. **T5 models**
+4. **T5 models**
    We fine-tunned Text-To-Text Transfer Transformer (T5) model using the ```t5-large``` check-point. Specifically, we used the T5 model settings proposed by [Alhindi et al](https://aclanthology.org/2022.emnlp-main.560/).
 
    * [generate_JSONLINES.py](https://github.com/m-chaves/falcon-fallacy-classification/blob/master/generate_JSONLINES.py) and [generate_JSONLINES.sh](https://github.com/m-chaves/falcon-fallacy-classification/blob/master/scripts/generate_JSONLINES.sh) allow to generate the JSONLINES files needed to train the T5 models. Each file in the JSONLINES includes the prompt and the target for the model.
    * [train_t5_alhindi_model.py](https://github.com/m-chaves/falcon-fallacy-classification/blob/master/train_t5_alhindi_model.py) allows to fine-tune and evaluate the T5 model. See [train_t5_alhindi.sh](https://github.com/m-chaves/falcon-fallacy-classification/blob/master/scheduler_scripts/train_t5_alhindi.sh) for an example of how to pass the arguments to the python script.
-   * [results_from_t5_models.ipynb](https://github.com/m-chaves/falcon-fallacy-classification/blob/master/results_from_t5_models.ipynb) gathers the results from the T5.
+   * [results_from_t5_models.ipynb](https://github.com/m-chaves/falcon-fallacy-classification/blob/master/results_from_t5_models.ipynb) gathers the results from the T5 models.
 
-4. **Results folder**
+5. **Results folder**
 
    * An example of the results obtained by the models can be found in ```results/models```. Note that the ```model.pt``` files (i.e. the file containing the fine-tunned model) are not included in the repository due to their size.
    * Files starting with ```df``` contain dataframes derived from the data-processing and annotation.
