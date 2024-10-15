@@ -1,0 +1,40 @@
+--model_name_or_path bert-base-uncased --num_epochs 50
+--model_name_or_path distilbert-base-uncased --num_epochs 50
+--model_name_or_path albert-base-v2 --num_epochs 50
+--model_name_or_path roberta-base --num_epochs 50
+--model_name_or_path microsoft/deberta-v3-base --num_epochs 50
+--model_name_or_path elozano/tweet_emotion_eval --num_epochs 50
+--model_name_or_path m-newhauser/distilbert-political-tweets --num_epochs 50
+--model_name_or_path Kev07/Toxic-Tweets --num_epochs 50
+--model_name_or_path jariasf/bert-tweets-covid --num_epochs 50
+--model_name_or_path roberta-base --num_epochs 50
+--model_name_or_path roberta-base --num_epochs 50 --modified_classification_head true
+--model_name_or_path roberta-base --num_epochs 50 --modified_classification_head true --dropout_between_fc true
+--model_name_or_path roberta-base --num_epochs 50 --feature_prefixes hashtags_
+--model_name_or_path roberta-base --num_epochs 50 --feature_prefixes mentions_
+--model_name_or_path roberta-base --num_epochs 50 --feature_prefixes emojis_
+--model_name_or_path roberta-base --num_epochs 50 --feature_prefixes VADER_ VAD_
+--model_name_or_path roberta-base --num_epochs 50 --feature_prefixes POS_
+--model_name_or_path roberta-base --num_epochs 50 --feature_prefixes hashtags_ mentions_ emojis_
+--model_name_or_path roberta-base --num_epochs 50 --feature_prefixes hashtags_ mentions_ emojis_ VADER_ VAD_ POS_
+--model_name_or_path roberta-base --num_epochs 50 --feature_prefixes hashtags_ --fc_after_features true
+--model_name_or_path roberta-base --num_epochs 50 --feature_prefixes mentions_ --fc_after_features true
+--model_name_or_path roberta-base --num_epochs 50 --feature_prefixes emojis_ --fc_after_features true
+--model_name_or_path roberta-base --num_epochs 50 --feature_prefixes VADER_ VAD_ --fc_after_features true
+--model_name_or_path roberta-base --num_epochs 50 --feature_prefixes POS_ --fc_after_features true
+--model_name_or_path roberta-base --num_epochs 50 --feature_prefixes hashtags_ mentions_ emojis_ --fc_after_features true
+--model_name_or_path roberta-base --num_epochs 50 --feature_prefixes hashtags_ mentions_ emojis_ VADER_ VAD_ POS_ --fc_after_features true
+--model_name_or_path microsoft/deberta-v3-base --num_epochs 50 --feature_prefixes hashtags_
+--model_name_or_path microsoft/deberta-v3-base --num_epochs 50 --feature_prefixes mentions_
+--model_name_or_path microsoft/deberta-v3-base --num_epochs 50 --feature_prefixes emojis_
+--model_name_or_path microsoft/deberta-v3-base --num_epochs 50 --feature_prefixes VADER_ VAD_
+--model_name_or_path microsoft/deberta-v3-base --num_epochs 50 --feature_prefixes POS_
+--model_name_or_path microsoft/deberta-v3-base --num_epochs 50 --feature_prefixes hashtags_ mentions_ emojis_
+--model_name_or_path microsoft/deberta-v3-base --num_epochs 50 --feature_prefixes hashtags_ mentions_ emojis_ VADER_ VAD_ POS_
+--model_name_or_path microsoft/deberta-v3-base --num_epochs 50 --feature_prefixes hashtags_ --fc_after_features true
+--model_name_or_path microsoft/deberta-v3-base --num_epochs 50 --feature_prefixes mentions_ --fc_after_features true
+--model_name_or_path microsoft/deberta-v3-base --num_epochs 50 --feature_prefixes emojis_ --fc_after_features true
+--model_name_or_path microsoft/deberta-v3-base --num_epochs 50 --feature_prefixes VADER_ VAD_ --fc_after_features true
+--model_name_or_path microsoft/deberta-v3-base --num_epochs 50 --feature_prefixes POS_ --fc_after_features true
+--model_name_or_path microsoft/deberta-v3-base --num_epochs 50 --feature_prefixes hashtags_ mentions_ emojis_ --fc_after_features true
+--model_name_or_path microsoft/deberta-v3-base --num_epochs 50 --feature_prefixes hashtags_ mentions_ emojis_ VADER_ VAD_ POS_ --fc_after_features true

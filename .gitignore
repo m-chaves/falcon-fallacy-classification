@@ -1,0 +1,64 @@
+# Basics
+*.aux
+*.auxlock
+*.fls
+*.fdb_latexmk
+*.blg
+*.bbl
+*.out
+*.synctex.gz
+*.log
+*.md5
+*.dpth
+*.code-workspace
+*.bcf
+*.run.xml
+*-blx.bib
+__pycache__/
+
+# Large files
+wandb/
+results/df_just_text.pkl
+results/df_relationships.pkl
+results/df_relationships_no_duplicates.pkl
+results/df.pkl
+results/df_user.pkl
+results/df_raw.pkl
+results/df_tweets.pkl
+results/df_tweets_basics.pkl
+results/df_all_ids.pkl
+results/df_components_to_id.pkl
+results/df_tweets_basic.pkl
+results/df_tweets_basic_sample.pkl
+results/df_basic_info.pkl
+results/df_basic_info.pkl
+results/topic_model
+results/topics_probabilities.pkl
+G_largest_component.net
+*.json
+*.zip
+# Ignore all files in results/models/ but don't ignore directories inside it
+results/models/**/*.*
+
+# Temporal files
+delete_me_later**
+**/local_md5sums.txt
+**/remote_md5sums.txt
+
+# Virtual environment related
+project_venv/
+venv_torch/
+label-studio/*
+logs/*
+lib/
+
+# Exceptions
+!/label-studio/instructions.html
+!/label-studio/interface.html
+!/results/models/**/test_metrics.json
+!/results/models/**/val_metrics.json
+!/results/models/**/classification_report.csv
+!/results/models/**/history.json
+!/results/models/**/true_labels_and_predictions.jsonl
+!/results/**.json
+!/results/models/**/gold_and_predictions.jsonl
