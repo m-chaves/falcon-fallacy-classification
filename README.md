@@ -68,9 +68,9 @@ We also evaluate the performance of different large language models (LLMs) on th
 
 5. **Results folder**
 
-   * An example of the results obtained by the models can be found in ```results/models```. Note that the ```model.pt``` files (i.e. the files containing the fine-tunned models) are not included in the repository due to their size. You can request access to the model.pt files of the best performing models [here](https://drive.google.com/drive/folders/1geKH8lWH3KEMRP_IRT6nvXrm78-UpQ0J?usp=drive_link).
+   * An example of the results obtained by the models can be found in [```results/models```](https://github.com/m-chaves/falcon-fallacy-classification/tree/master/results). Note that the ```model.pt``` files (i.e. the files containing the fine-tunned models) are not included in the repository due to their size. You can request access to the model.pt files of the best performing models [here](https://drive.google.com/drive/folders/1geKH8lWH3KEMRP_IRT6nvXrm78-UpQ0J?usp=drive_link).
    * Files starting with ```df``` contain dataframes derived from the data-processing and annotation.
-   * Files starting with ```G``` contain graphs. The most important one to consider is ```G_modified_with_attributes.graphml.gz``` which contains 382126 tweets (nodes) and 256269 arcs between as well as attributes (text, creation date, anonymized user ID) for each node.To load it use:
+   * Files starting with ```G``` contain graphs. The most important one to consider is [```G_modified_with_attributes.graphml.gz```](https://github.com/m-chaves/falcon-fallacy-classification/blob/master/results/G_modified_with_attributes.graphml.gz) which contains 382126 tweets (nodes) and 256269 arcs between as well as attributes (text, creation date, anonymized user ID) for each node.To load it use:
       ```python
          with gzip.open("results/G_modified_with_attributes.graphml.gz", "rb") as f:
             G = nx.read_graphml(f)
