@@ -7,9 +7,9 @@ The dataset's graph structure enables analysis of the relationships between fall
 
 # Train Validation Test Sets
 
-The annotated dataset can be found at [```datasets/train_val_test_sets```](https://github.com/m-chaves/falcon-fallacy-classification/tree/master/datasets/train_val_test_sets).
 The dataset was split by components of the graph, with 60% allocated to training, 20% to validation, and 20% to testing.
-The dataset contains 2916 annotated tweets.
+It contains 2916 annotated tweets.
+The files df_train.csv, df_val.csv, and df_test.csv contain the training, validation, and test sets, respectively.
 
 # Graphs
 
